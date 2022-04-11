@@ -1,26 +1,22 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class Solution {
-    public static void main(String[] args) {
-        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
 
-        System.out.println(maxSubArray(nums));
+    public static void main(String[] args) {
+        int[] nums = {4,1,2,1,2};
+        String s = "MCMXCIV";
+        int x = 7;
+        System.out.println(countBits(x));
     }
 
-    public static int maxSubArray(int[] nums) {
-        if (nums.length == 1)
-            return nums[0];
-        else if (nums.length == 2)
-            return Math.max(Math.max(nums[0],nums[1]),nums[0] + nums[1]);
-        int sum = nums[0] + nums[1];
-        for (int i = 2;i < nums.length -1;i++)
-        {
-            sum = Math.max(sum + nums[i],nums[i]);
+    public static int[] countBits(int n) {
+        int[] ans = new int[n + 1];
+        for (int x = 1; x <= n; ++x) {
+            int a = x & (x - 1);
+            ans[x] = ans[x & (x - 1)] + 1;
         }
-        return sum;
+        return ans;
     }
 
 }
