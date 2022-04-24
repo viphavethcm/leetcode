@@ -2,21 +2,31 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 public class Solution {
-
     public static void main(String[] args) {
-        int[] nums = {4,1,2,1,2};
-        String s = "MCMXCIV";
-        int x = 7;
-        System.out.println(countBits(x));
+        int[] nums = {1};
+        String s = "abc";
+        String t = "abhgdc";
+        int x = 8;
+        System.out.println(permute(nums));
     }
 
-    public static int[] countBits(int n) {
-        int[] ans = new int[n + 1];
-        for (int x = 1; x <= n; ++x) {
-            int a = x & (x - 1);
-            ans[x] = ans[x & (x - 1)] + 1;
+    public static List<List<Integer>> permute(int[] nums) {
+
+        List<List<Integer>> rs = new ArrayList<>();
+        List<Integer> permutation = new ArrayList<>();
+
+        for (int num : nums) {
+            permutation.add(num);
         }
-        return ans;
+
+        for (int i = 0;i < permutation.size(); i++)
+        {
+            for (int j = permutation.size() - 1;j > i; j--);
+            {
+
+            }
+        }
+        return rs;
     }
 
 }
