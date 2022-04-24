@@ -3,30 +3,24 @@ import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
-        int[] nums = {1};
+        int[] nums = {2,7,11,15};
         String s = "abc";
         String t = "abhgdc";
-        int x = 8;
-        System.out.println(permute(nums));
+        int x = 9;
+
     }
 
-    public static List<List<Integer>> permute(int[] nums) {
 
-        List<List<Integer>> rs = new ArrayList<>();
-        List<Integer> permutation = new ArrayList<>();
-
-        for (int num : nums) {
-            permutation.add(num);
-        }
-
-        for (int i = 0;i < permutation.size(); i++)
-        {
-            for (int j = permutation.size() - 1;j > i; j--);
-            {
-
-            }
-        }
-        return rs;
+    public class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
+
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
+    }
 }
