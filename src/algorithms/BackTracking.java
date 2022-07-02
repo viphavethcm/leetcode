@@ -1,5 +1,6 @@
 package algorithms;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -17,6 +18,8 @@ public class BackTracking {
         for (int num : nums) {
             permutation.add(num);
         }
+        BigInteger a = new BigInteger("1000000000000000000000000000001");
+        System.out.println(a.mod(new BigInteger("10")));
         solve(nums.length,permutation,rs,0);
         return null;
     }
